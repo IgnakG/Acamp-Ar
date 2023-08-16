@@ -1,151 +1,68 @@
 header {
-  background-color: lightblue; }
+  background-color: lightblue;
+  width: 100%; }
 
 footer {
   background-color: lightblue; }
 
 /* Vista Mobile */
 @media screen and (max-width: 768px) {
-  .gridMobile {
+  .gridHeader {
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas: "header" "main" "footer";
-    grid-template-rows: auto auto auto; }
-  .positionNav {
+    grid-template-columns: 60% 40%;
+    grid-template-areas: "logo favoritos" "buscador buscador" "localidades localidades";
+    grid-template-rows: 20% 10% 50%; }
+  .gridLocalidades {
     display: grid;
+    justify-content: center;
     grid-template-columns: 50% 50%;
+    grid-template-areas: "localidadEsco localidadCamp" "localidadZara localidadSanp";
     grid-template-rows: 50% 50%;
-    grid-template-areas: "primerLink segundoLink" "tercerLink cuartoLink"; }
-  .gridProdPrincipales {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "tituloProductos tituloProductos" "primerProducto segundoProducto" "tercerProducto cuartoProducto" "quintoProducto sextoProducto";
-    grid-template-rows: auto auto auto auto; }
-  .productos {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "tituloProductos tituloProductos" "primerProducto segundoProducto" "tercerProducto cuartoProducto" "quintoProducto sextoProducto";
-    grid-template-rows: auto auto auto; }
-  .redesDesign {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: gray;
-    padding: 10px 20px;
-    border: 2px solid black;
-    margin: 2% 20%; }
-  .relativeNavDesign:hover {
-    background-color: #95a7ac; }
-  .banner:hover {
-    box-shadow: inset 100px 100px 100px 100px #333131; } }
+    margin: 10%; } }
 
 /* Vista Intermedia */
-@media screen and (max-width: 1023px) and (min-width: 769px) {
-  .gridHeader {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "banner relatives";
-    grid-template-rows: auto; }
-  .positionNav {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "primerLink segundoLink" "tercerLink cuartoLink"; }
-  .gridMain {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "intro prodPrincipales";
-    grid-template-rows: auto; }
-  .gridProdPrincipales {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-areas: "tituloProductos tituloProductos tituloProductos tituloProductos" "primerProducto primerProducto segundoProducto segundoProducto" "tercerProducto cuartoProducto quintoProducto sextoProducto";
-    grid-template-rows: auto auto auto; }
-  .gridFooter {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "redes marca" "aviso aviso";
-    grid-template-rows: auto auto; }
-  .relativeNavDesign:hover {
-    background-color: #95a7ac; }
-  .overflow {
-    overflow: auto;
-    height: 50%; }
-  .productos {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-areas: "tituloProductos tituloProductos tituloProductos" "primerProducto segundoProducto tercerProducto" "cuartoProducto quintoProducto sextoProducto";
-    grid-template-rows: auto auto auto; }
-  .redesDesign {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: gray;
-    padding: 10px 20px;
-    border: 2px solid black;
-    margin: 2% 20%; } }
-
 /* Vista Desktop */
-@media screen and (min-width: 1024px) {
-  .gridHeader {
-    display: grid;
-    grid-template-columns: 40% 30% 30%;
-    grid-template-areas: "logo buscador favoritos" "localidades localidades localidades";
-    grid-template-rows: auto; }
-  .positionNav {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "primerLink segundoLink" "tercerLink cuartoLink"; }
-  .gridMain {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "intro prodPrincipales";
-    grid-template-rows: auto; }
-  .gridProdPrincipales {
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-areas: "";
-    grid-template-rows: auto auto auto; }
-  .gridFooter {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "redes marca" "aviso aviso";
-    grid-template-rows: auto auto; }
-  .relativeNavDesign:hover {
-    background-color: #95a7ac; }
-  .banner:hover {
-    box-shadow: inset 100px 100px 100px 100px #333131; }
-  .productos {
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-template-areas: "";
-    grid-template-rows: auto auto auto; }
-  .redesDesign {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: gray;
-    padding: 10px 20px;
-    border: 2px solid black;
-    margin: 2% 20%; } }
+.btnLocalidad {
+  background-color: #58a18f;
+  border: none;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 12px;
+  padding: 10%;
+  margin: 10%; }
 
 header {
   grid-area: header; }
 
 .logo {
-  grid-area: logo; }
+  grid-area: logo;
+  margin: 10%; }
 
 .buscador {
-  grid-area: buscador; }
+  grid-area: buscador;
+  margin: 20%; }
 
 .favoritos {
-  grid-area: favoritos; }
+  grid-area: favoritos;
+  display: flex;
+  justify-self: center;
+  margin: 20%; }
 
 .localidades {
-  grid-area: localidades;
-  display: flex;
-  justify-self: center; }
+  grid-area: localidades; }
+
+.localidadEsco {
+  grid-area: localidadEsco; }
+
+.localidadCamp {
+  grid-area: localidadCamp; }
+
+.localidadZara {
+  grid-area: localidadZara; }
+
+.localidadSanp {
+  grid-area: localidadSanp; }
 
 main {
   grid-area: main; }
