@@ -8,32 +8,94 @@
 
     <!-- Estilo Local -->
     <link rel="stylesheet" href="css/estilo.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
+    <!--Links Prueba-->
+
+    <link rel="shortcut icon" href="images/templatemo_favicon.ico">
+    <!-- bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- fancybox CSS -->
+    <link href="css/jquery.lightbox.css" rel="stylesheet" />
+    <!-- flex slider CSS -->
+    <link href="css/flexslider.css" rel="stylesheet" />
+    <!-- custom styles for this template -->
+    <link href="css/templatemo_style.css" rel="stylesheet" />
+    
 </head>
 <body>
     <!-- Para comenzar -->
-    <header class="gridHeader">
-        <div class="logo">
-            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="50%"></a>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5 col-md-push-1 col-sm-6">
+                    <a href="#" id="logo"><img src="img/Logo.jpeg" alt="Acampar" width="50%"></a>
+                </div>
+                <div class="col-md-3 hidden-xs"></div>
+                <div class="col-xs-3 col-xs-offset-20 visible-xs">
+                    <a href="#" id="mobile_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+                </div>
+                <div class="col-xs-24 visible-xs" id="mobile_menu_list">
+                    <ul>
+                        <li><a href="#templatemo_slideshow">Inicio</a></li>
+                        <li><a href="#templatemo_about">Informacion</a></li>
+                        <li><a href="#templatemo_services">Servicios</a></li>
+                        <li><a href="#templatemo_blog">Blog</a></li>
+                        <li><a href="#templatemo_gallery">Galeria</a></li>
+                        <li><a href="#templatemo_contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-16 col-sm-18 hidden-xs" id="templatemo-nav-bar">
+                    <ul class="nav navbar-right">
+                        <li><a href="#templatemo_slideshow">Inicio</a></li>
+                        <li><a href="#templatemo_about">Informacion</a></li>
+                        <li><a href="#templatemo_services">Servicios</a></li>
+                        <li><a href="#templatemo_blog">Blog</a></li>
+                        <li><a href="#templatemo_gallery">Galeria</a></li>
+                        <li><a href="#templatemo_contact">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        
-        <div class="buscador">
-            <input type="text">
-        </div>
-        <div class="favoritos">
-            <button>Favoritos</button>
-        </div>
-        <nav class="localidades gridLocalidades">
-            <a href="pages/escobar.html" class="btnLocalidad localidadEsco">Escobar</a>
-            <a href="pages/campana.html" class="btnLocalidad localidadCamp">Campana</a>
-            <a href="pages/zarate.html" class="btnLocalidad localidadZara">Zarate</a>
-            <a href="pages/sanpedro.html" class="btnLocalidad localidadSanp">San Pedro</a>
-        </nav>
+</div>
     </header>
 
-    <main class="gridMain">
+    <main class="">
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
+        <div class="logo">
+            <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
+        </div>
         <div class="logo">
             <a href="index.html"><img src="img/Logo.jpeg" alt="Acampar" width="20%"></a>
         </div>
@@ -43,7 +105,23 @@
         <div>
         </div>
     </footer>
+
+    <script>
+        function parallax_height() {
+            var scroll_top = $(this).scrollTop();
+            var sample_section_top = $(".sample-section").offset().top;
+            var header_height = $(".sample-header-section").outerHeight();
+            $(".sample-section").css({ "margin-top": header_height });
+            $(".sample-header").css({ height: header_height - scroll_top });
+        }
+        parallax_height();
+        $(window).scroll(function() {
+            parallax_height();
+        });
+        $(window).resize(function() {
+        parallax_height();
+        });
+    </script>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</body>
+   </body>
 </html>
